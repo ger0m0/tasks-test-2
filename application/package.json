@@ -1,0 +1,30 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "cd react-app && npm run build",
+    "dev": "nodemon server.ts",
+    "app_start": "cd react-app && npm run start"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/express-mysql-session": "^2.1.3",
+    "@types/multer": "^1.4.7",
+    "@types/mysql": "^2.15.21",
+    "@types/passport": "^1.0.12",
+    "@types/passport-local": "^1.0.35",
+    "axios": "^1.3.4",
+    "connect-redis": "^7.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-mysql-session": "^2.1.8",
+    "express-session": "^1.17.3",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.2.0",
+    "redis": "^4.6.5",
+    "sync-mysql": "^3.0.1"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  }
+}

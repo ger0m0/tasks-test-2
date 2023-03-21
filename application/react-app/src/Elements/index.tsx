@@ -1,0 +1,6 @@
+export { default as Pagination } from './Pagination/index'
+export { default as TaskList } from './TaskList/index'
+export { default as PanelAccess } from './PanelAccess/index'
+export { default as Form } from './Form/index'
+export { default as Header } from './Header/index'
+export { default as TaskItem } from './TaskItem/index'

@@ -1,0 +1,50 @@
+version: '3'
+
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:8
+    ports:
+      - "${MYSQL_PORT}:3306"
+    cap_add:
+      - SYS_NICE
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    volumes:
+      - ./save/mysql:/var/lib/mysql
+      - ./save/init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: always
+
+  redis:
+    container_name: redis
+    image: redis:7
+    restart: always
+    ports:
+      - "6379:6379"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8090:8080
+
+  server_1:
+    container_name: ${SERVER_1_NAME}
+    image: joonk/tasks:latest
+    restart: always
+    ports:
+      - "${SERVER_1_PORT}:${SERVER_1_PORT}"
+    depends_on:
+      - mysql
+      - redis
+    environment:
+      NODE_ENV: production
+      MYSQL_HOST: "45.9.42.100"
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: root
+      MYSQL_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_PORT: ${MYSQL_PORT}
+      MYSQL_TEST: 'mysql://root:reqreq@45.9.42.100:3307/tasks'

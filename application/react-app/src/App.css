@@ -1,0 +1,157 @@
+:root {
+  --backgroundColor: #1A1A1A;
+  --primaryColor: #30D5C8;
+  --primaryDisableColor: #30D5C870;
+  --secondaryColor: #27282A;
+  --textColor: #DFDFDF;
+}
+
+* {
+  border-color: var(--secondaryColor);
+  border-style: solid;
+  border-width: 0;
+  color: var(--textColor);
+}
+
+html {
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
+  font-size: 18px;
+}
+
+body {
+  border-color: var(--secondaryColor);
+}
+
+.taskWrap {
+  padding: 0 30px;
+}
+
+.taskItem {
+  background-color: var(--secondaryColor);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.taskItem__name {
+  font-size: 21px;
+}
+
+a {
+  color: var(--primaryColor);
+  text-decoration: none;
+}
+
+.panelLink {
+  padding: 20px 0;
+  text-align: center;
+  border-bottom-width: 1px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.pagination>div {
+  margin: 0 5px;
+}
+
+.pagination>div.active>div {
+  color: var(--primaryDisableColor);
+}
+
+.headerTasks {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+.sortBlock {
+  display: flex;
+}
+
+.sortBlock__text {
+  margin-right: 10px;
+}
+
+textarea,
+input {
+  background-color: var(--secondaryColor);
+  font-size: 16px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='submit'],
+input[type='email'] {
+  padding: 10px 10px;
+  width: 100%;
+}
+
+textarea {
+  padding: 10px;
+  height: 200px;
+  width: 100%;
+}
+
+
+.form {
+  padding: -10px 0;
+  max-width: 500px;
+  margin: 20px auto 0;
+}
+
+.form>div {
+  margin: 10px 0
+}
+
+h2 {
+  text-align: center;
+}
+
+input[type='submit'] {
+  padding: 15px;
+  cursor: pointer;
+}
+
+select,
+option {
+  color: var(--backgroundColor);
+}
+
+.error {
+  color: red;
+  height: 30px;
+}
+
+.logout {
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+/* label {
+  display: flex;
+  text-align: left;
+} */
+
+/* "primary": "#30D5C8",
+"secondary": "#27282A",
+"main": "#30D5C8",
+"background": "#1A1A1A",
+"header": "#1A1A1A",
+"footer": "#1A1A1A",
+"border": "#3E3E3E",
+"icon": "#DFDFDF",
+"text": "#DFDFDF",
+"textTint": "#8F9BB3",
+"textMuted": "" */
